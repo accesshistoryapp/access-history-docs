@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Access History — Support &amp; FAQ</title>
+<style>
+  :root { color-scheme: light dark; }
+  body {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 2.5rem 1.25rem 5rem;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+    color: #1d1d1f;
+    background: #ffffff;
+  }
+  @media (prefers-color-scheme: dark) {
+    body { color: #e8e8ea; background: #16161a; }
+    a { color: #7dbcff; }
+    code { background: #26262c; }
+    hr { border-color: #333; }
+  }
+  h1 { font-size: 1.7rem; margin-bottom: 0.25rem; }
+  h2 { font-size: 1.2rem; margin-top: 2.2rem; border-bottom: 1px solid currentColor; padding-bottom: 0.3rem; opacity: 0.95; }
+  p, li { font-size: 1rem; }
+  .sub { opacity: 0.7; margin-top: 0; }
+  code { background: #f2f2f4; padding: 0.15em 0.4em; border-radius: 4px; font-size: 0.92em; }
+  ul { padding-left: 1.3rem; }
+  footer { margin-top: 3rem; opacity: 0.7; font-size: 0.9rem; }
+  a { color: #0057d8; }
+</style>
+</head>
+<body>
+
+<h1>Access History</h1>
+<p class="sub">Support &amp; FAQ</p>
+
+<h2>Setup</h2>
+<p><strong>How do I install it?</strong> Install from the Atlassian Marketplace listing like any other Jira app. No configuration is required — it starts working immediately.</p>
+<p><strong>Where do I find it after installing?</strong> Jira Settings (gear icon) → Apps → <strong>Access History</strong> in the left sidebar. If you don't see it there, confirm you're logged in as a Jira administrator on that specific site — the page requires site admin permission to view.</p>
+<p><strong>When does the first snapshot happen?</strong> Automatically, within a few minutes of install, and then every week after that. You can also click <strong>Run snapshot now</strong> on the app's page at any time — for example, right before an audit — instead of waiting for the weekly schedule.</p>
+
+<h2>Using it</h2>
+<p><strong>What am I looking at in the table?</strong> Each row is one project, one role, one member: who has that role on that project, as of the snapshot's timestamp.</p>
+<p><strong>Why are some rows missing / hidden?</strong> By default, app and integration accounts (Slack for Jira, Automation for Jira, this app itself, etc.) are hidden from the table so you're looking at human access, not integrations. Toggle <strong>"Hide app and integration accounts"</strong> off to see everything.</p>
+<p><strong>How are app accounts detected?</strong> Membership in Jira's own <code>atlassian-addons-project-access</code> role, which Jira reserves specifically for app/integration access — a reliable, built-in signal, not a guess.</p>
+<p><strong>A role shows "(no members)" — is that a bug?</strong> No. It means that role exists on the project but currently has nobody assigned to it. This is normal for roles like "Viewer" that a project simply never uses.</p>
+<p><strong>Does the CSV export match what's on screen?</strong> The CSV always includes every row — including app accounts, clearly labeled — regardless of whether the on-screen toggle is hiding them. The toggle only affects the table view, so the exported record for an audit is always complete.</p>
+<p><strong>How far back does history go?</strong> Roughly two years (104 weekly snapshots) are kept per site. Older snapshots are automatically removed to keep storage size bounded.</p>
+
+<h2>Data &amp; privacy</h2>
+<p>See the <a href="privacy.html">Privacy Policy</a> for the full policy. Short version: everything runs inside Atlassian's own infrastructure, nothing is sent to a third party, and only site admins can see the data.</p>
+<p><strong>What happens if I uninstall the app?</strong> Stored snapshots become inaccessible immediately and are permanently deleted within 28 days.</p>
+
+<h2>Pricing</h2>
+<p>Access History is currently free. There is no paid tier at this time.</p>
+
+<h2>Something's wrong / feature request</h2>
+<p>Contact <a href="mailto:SUPPORT_EMAIL">SUPPORT_EMAIL</a>. This is a small, actively maintained app — expect a response, not an automated ticket queue, but please allow a business day or two.</p>
+
+<footer>Access History · <a href="privacy.html">Privacy Policy</a></footer>
+
+</body>
+</html>
